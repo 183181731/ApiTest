@@ -1,0 +1,16 @@
+{
+    "testDemo":{
+        "title":"孩子心理健康API接口测试(获取用户基础数据、添加孩子)",
+        "report_file": "testDemo",
+        "cases":{
+            "children_tc":[
+                "v01.test_children"
+            ],
+			"parents_tc":[
+                "v01.test_parents"
+            ]
+        },
+        "receivers":["100861"],
+        "group":[]
+    }
+}

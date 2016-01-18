@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>孩子心理健康API接口测试(获取用户基础数据、添加孩子)</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet" href="http://qa-demo.web.sdp.101.com/assets/pyunit.css" />
+    <script type="text/javascript" src="http://qa-demo.web.sdp.101.com/assets/jquery.min.js"></script>
+    <script type="text/javascript" src="http://qa-demo.web.sdp.101.com/assets/pyunit.js"></script>
+    
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+/*
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+*/
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+
+<div class='heading'>
+<h1>孩子心理健康API接口测试(获取用户基础数据、添加孩子)</h1>
+
+<p class='attribute'><strong>该次测试执行于:</strong> 2016-01-12 22:38:45</p>
+<p class='attribute'><strong>接口运行时间:</strong> 0:00:00.108000</p>
+<p class='attribute'><strong>状态:</strong> 通过 2</p>
+
+
+<p class='description'></p>
+</div>
+
+
+
+<p id='show_detail_line'>显示：
+<a href='javascript:showCase(0)'>概要信息</a>
+<a href='javascript:showCase(1)'>失败的测试</a>
+<a href='javascript:showCase(2)'>所有测试</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+
+<tr id='header_row'>
+    <td>测试套件集/测试用例</td>
+    <td>统计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>更多</td>
+</tr>
+
+<tr class='passClass'>
+    <td>parents_tc.v01.test_parents.ParentsTest</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',1)" class="detail-link">查看详情</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_getinfo(测试查询用户基础数据)</div></td>
+
+    <td colspan='4' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >通过</a>
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div class="error-info">
+        &lt;br&gt;pt1.1: start run parents test ......&lt;br&gt;http://api.new.me.tmc:80/newme/v0.1/parents/21521&lt;br&gt;No handlers could be found for logger "test01"&lt;br&gt;{'data': '{"parent_id":21521,"uc_id":1000137571,"parent_name":"1000137571","parent_nick_name":"1000137571","email":null,"sex":-1,"area":110101,"event_list":[],"birthday":null,"created_time":"2015-09-30T19:51:51Z","mobile":null,"avatar":null,"children_count":13,"user_score":0,"questions_count":0,"answers_count":0,"select_children":10279716,"is_handpassword":1,"full_energy":6,"guide_json":null,"parents_habits_json":null}', 'code': 200, 'request': 'GET api.new.me.tmc:80http://api.new.me.tmc:80/newme/v0.1/parents/21521', 'response_time': 19L}&lt;br&gt;{u'user_score': 0, u'parent_name': u'1000137571', u'questions_count': 0, u'area': 110101, u'mobile': None, u'select_children': 10279716, u'children_count': 13, u'parents_habits_json': None, u'sex': -1, u'parent_nick_name': u'1000137571', u'parent_id': 21521, u'birthday': None, u'avatar': None, u'full_energy': 6, u'created_time': u'2015-09-30T19:51:51Z', u'uc_id': 1000137571, u'guide_json': None, u'answers_count': 0, u'email': None, u'is_handpassword': 1, u'event_list': []}&lt;br&gt;&lt;br&gt;
+        </div>
+    </div>
+    <!--css div popup end-->
+    </td>
+
+    <td colspan='1' align='center'><div class='spendTime'>0.022s</div></td>
+</tr>
+
+<tr class='passClass'>
+    <td>children_tc.v01.test_children.ChildrenTest</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',1)" class="detail-link">查看详情</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_children(测试添加孩子数据)</div></td>
+
+    <td colspan='4' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >通过</a>
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div class="error-info">
+        &lt;br&gt;pt2.1: start run children test ......&lt;br&gt;{u'status': 0, u'parent_id': 21521, u'child_id': 10279717}&lt;br&gt;{u'user_id': 21521, u'child_name': u'tiantian', u'sex': 1, u'birthday': u'2009-01-09', u'child_id': 10279717, u'password': u'6D6B8DBEF8BC7863', u'imp_path': []}&lt;br&gt;run children test complete......&lt;br&gt;&lt;br&gt;
+        </div>
+    </div>
+    <!--css div popup end-->
+    </td>
+
+    <td colspan='1' align='center'><div class='spendTime'>0.086s</div></td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>2</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+
+
+</body>
+</html>

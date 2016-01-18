@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>99U校友API接口文档活动详情</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet" href="http://qa-demo.web.sdp.101.com/assets/pyunit.css" />
+    <script type="text/javascript" src="http://qa-demo.web.sdp.101.com/assets/jquery.min.js"></script>
+    <script type="text/javascript" src="http://qa-demo.web.sdp.101.com/assets/pyunit.js"></script>
+    
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+/*
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+*/
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+
+<div class='heading'>
+<h1>99U校友API接口文档活动详情</h1>
+
+<p class='attribute'><strong>该次测试执行于:</strong> 2016-01-06 19:13:03</p>
+<p class='attribute'><strong>接口运行时间:</strong> 0:00:00.030000</p>
+<p class='attribute'><strong>状态:</strong> 错误 1</p>
+
+
+<p class='description'></p>
+</div>
+
+
+
+<p id='show_detail_line'>显示：
+<a href='javascript:showCase(0)'>概要信息</a>
+<a href='javascript:showCase(1)'>失败的测试</a>
+<a href='javascript:showCase(2)'>所有测试</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+
+<tr id='header_row'>
+    <td>测试套件集/测试用例</td>
+    <td>统计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>更多</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>campaign_tc.v01.test_campaign.CampaignTest</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c1',1)" class="detail-link">查看详情</a></td>
+</tr>
+
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_find_campaign(活动平台查找活动)</div></td>
+
+    <td colspan='4' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" ><span style='color:#e74c3c'>错误</span></a>
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div class="error-info">
+        &lt;br&gt;ft1.1: start run campaign test ......&lt;br&gt;Traceback (most recent call last):&lt;br&gt;  File "D:\workspace\testDemo\runner\..\testcases\campaign_tc\v01\test_campaign.py", line 28, in test_find_campaign&lt;br&gt;    find_response = self.ca.findCampaign(params)&lt;br&gt;  File "..\api_call\campaign\campaign.py", line 15, in findCampaign&lt;br&gt;    return self.http_obj.get(url, params)&lt;br&gt;  File "..\cof\http.py", line 77, in get&lt;br&gt;    conn.request(method="GET", url=url, headers=self.header)&lt;br&gt;  File "C:\Python27\lib\httplib.py", line 1001, in request&lt;br&gt;    self._send_request(method, url, body, headers)&lt;br&gt;  File "C:\Python27\lib\httplib.py", line 1035, in _send_request&lt;br&gt;    self.endheaders(body)&lt;br&gt;  File "C:\Python27\lib\httplib.py", line 997, in endheaders&lt;br&gt;    self._send_output(message_body)&lt;br&gt;  File "C:\Python27\lib\httplib.py", line 850, in _send_output&lt;br&gt;    self.send(msg)&lt;br&gt;  File "C:\Python27\lib\httplib.py", line 812, in send&lt;br&gt;    self.connect()&lt;br&gt;  File "C:\Python27\lib\httplib.py", line 793, in connect&lt;br&gt;    self.timeout, self.source_address)&lt;br&gt;  File "C:\Python27\lib\socket.py", line 553, in create_connection&lt;br&gt;    for res in getaddrinfo(host, port, 0, SOCK_STREAM):&lt;br&gt;gaierror: [Errno 11004] getaddrinfo failed&lt;br&gt;&lt;br&gt;
+        </div>
+    </div>
+    <!--css div popup end-->
+    </td>
+
+    <td colspan='1' align='center'><div class='spendTime'>0.03s</div></td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//api_call/children/children_api.py=utf-8
+encoding//api_call/parents/parents_api.py=utf-8
+encoding//api_call/uc_token/test.py=utf-8
+encoding//api_call/uc_token/uc_api.py=utf-8
+encoding//api_call/uc_token/uc_factory.py=utf-8
+encoding//base/http.py=utf-8
+encoding//cof/conf.py=utf-8
+encoding//cof/http.py=utf-8
+encoding//cof/restful.py=utf-8
+encoding//lib/log.py=utf-8
+encoding//runner/runner.py=utf-8
+encoding//testcases/children_tc/v01/test_children.py=utf-8
+encoding//testcases/parents_tc/v01/test_parents.py=utf-8
+encoding/HTMLTestRunner.py=utf-8
